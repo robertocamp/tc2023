@@ -1,0 +1,12 @@
+Dev s3 bucket name = cfst-3035-9104a91f34d49f7f91d6d0ebe7c-s3bucketdev-1oljokr4p9y0a
+
+Prod s3 bucket name = cfst-3035-9104a91f34d49f7f91d6d0ebe7-s3bucketprod-11bzx4beulaug
+
+Engineering s3 bucket name = cfst-3035-9104a91f34d49f7f91d-s3bucketengineering-ql6ohzaua7xv
+
+Secret s3 bucket name = cfst-3035-9104a91f34d49f7f91d6d0eb-s3bucketsecret-jn3wjtciurbc
+
+arn:aws:iam::755889206436:policy/DevS3ReadAccess
+
+i-051f7cc4765ddd166
+
