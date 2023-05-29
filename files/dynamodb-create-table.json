@@ -1,0 +1,36 @@
+{
+  "TableDescription": {
+      "AttributeDefinitions": [
+          {
+              "AttributeName": "FirstName",
+              "AttributeType": "S"
+          },
+          {
+              "AttributeName": "LastName",
+              "AttributeType": "S"
+          }
+      ],
+      "TableName": "Authors",
+      "KeySchema": [
+          {
+              "AttributeName": "LastName",
+              "KeyType": "HASH"
+          },
+          {
+              "AttributeName": "FirstName",
+              "KeyType": "RANGE"
+          }
+      ],
+      "TableStatus": "CREATING",
+      "CreationDateTime": "2023-05-28T18:16:08.695000-05:00",
+      "ProvisionedThroughput": {
+          "NumberOfDecreasesToday": 0,
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+      },
+      "TableSizeBytes": 0,
+      "ItemCount": 0,
+      "TableArn": "arn:aws:dynamodb:us-east-2:240195868935:table/Authors",
+      "TableId": "3958e51b-fa1c-45a2-b801-b3b2225dc7ec"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "Vpc": {
+      "CidrBlock": "10.200.0.0/16",
+      "DhcpOptionsId": "dopt-e190378a",
+      "State": "pending",
+      "VpcId": "vpc-0eee55e7b865fbbb0",
+      "OwnerId": "240195868935",
+      "InstanceTenancy": "default",
+      "Ipv6CidrBlockAssociationSet": [],
+      "CidrBlockAssociationSet": [
+          {
+              "AssociationId": "vpc-cidr-assoc-09d0429191e7b89fd",
+              "CidrBlock": "10.200.0.0/16",
+              "CidrBlockState": {
+                  "State": "associated"
+              }
+          }
+      ],
+      "IsDefault": false
+  }
+}
+❯ aws ec2 create-subnet --vpc-id vpc-0eee55e7b865fbbb0 --cidr-block 10.200.0.0/24 --availability-zone us-east-2b
+{
+  "Subnet": {
+      "AvailabilityZone": "us-east-2b",
+      "AvailabilityZoneId": "use2-az2",
+      "AvailableIpAddressCount": 251,
+      "CidrBlock": "10.200.0.0/24",
+      "DefaultForAz": false,
+      "MapPublicIpOnLaunch": false,
+      "State": "available",
+      "SubnetId": "subnet-0e591d22f3ef319bc",
+      "VpcId": "vpc-0eee55e7b865fbbb0",
+      "OwnerId": "240195868935",
+      "AssignIpv6AddressOnCreation": false,
+      "Ipv6CidrBlockAssociationSet": [],
+      "SubnetArn": "arn:aws:ec2:us-east-2:240195868935:subnet/subnet-0e591d22f3ef319bc",
+      "EnableDns64": false,
+      "Ipv6Native": false,
+      "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+      }
+  }
+}

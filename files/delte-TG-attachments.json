@@ -1,0 +1,21 @@
+{
+  "TransitGatewayVpcAttachment": {
+      "TransitGatewayAttachmentId": "tgw-attach-0aff88c45e968a347",
+      "TransitGatewayId": "tgw-0ef467e501f85f1f3",
+      "VpcId": "vpc-00ca1f9d4ade79810",
+      "VpcOwnerId": "240195868935",
+      "State": "deleting",
+      "CreationTime": "2023-05-28T00:55:52+00:00"
+  }
+}
+❯ aws ec2 delete-transit-gateway-vpc-attachment --transit-gateway-attachment-id tgw-attach-09d2254ededa3a61c
+{
+  "TransitGatewayVpcAttachment": {
+      "TransitGatewayAttachmentId": "tgw-attach-09d2254ededa3a61c",
+      "TransitGatewayId": "tgw-0ef467e501f85f1f3",
+      "VpcId": "vpc-0eee55e7b865fbbb0",
+      "VpcOwnerId": "240195868935",
+      "State": "deleting",
+      "CreationTime": "2023-05-28T00:56:26+00:00"
+  }
+}

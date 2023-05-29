@@ -1,0 +1,14 @@
+{
+  "HostedZones": [
+      {
+          "Id": "/hostedzone/Z03659883L37ZBEUGX6C8",
+          "Name": "brahmabar.com.",
+          "CallerReference": "066a7f87-85fc-4afa-9eed-714106f688a0",
+          "Config": {
+              "Comment": "tc2023",
+              "PrivateZone": false
+          },
+          "ResourceRecordSetCount": 2
+      }
+  ]
+}

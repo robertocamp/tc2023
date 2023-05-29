@@ -1,0 +1,18 @@
+{
+  "TransitGatewayVpcAttachment": {
+      "TransitGatewayAttachmentId": "tgw-attach-09d2254ededa3a61c",
+      "TransitGatewayId": "tgw-0ef467e501f85f1f3",
+      "VpcId": "vpc-0eee55e7b865fbbb0",
+      "VpcOwnerId": "240195868935",
+      "State": "pending",
+      "SubnetIds": [
+          "subnet-0e591d22f3ef319bc"
+      ],
+      "CreationTime": "2023-05-28T00:56:26+00:00",
+      "Options": {
+          "DnsSupport": "enable",
+          "Ipv6Support": "disable",
+          "ApplianceModeSupport": "disable"
+      }
+  }
+}

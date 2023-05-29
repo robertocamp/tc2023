@@ -1,0 +1,33 @@
+{
+	"Name": "My Estimate",
+	"Total Cost": {
+		"monthly": "3.01",
+		"upfront": "0.00",
+		"12 months": "36.12"
+	},
+	"Metadata": {
+		"Currency": "USD",
+		"Locale": "en_US",
+		"Created On": "5/29/2023",
+		"Legal Disclaimer": "AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",
+		"Share Url": "https://calculator.aws/#/estimate?id=4a99a96a929df88a7a57c24f32e6ad99c29b1f41"
+	},
+	"Groups": {
+		"Services": [
+			{
+				"Service Name": "Amazon Route 53",
+				"Description": "hosting a business domain on R53",
+				"Region": "US East (Ohio)",
+				"Service Cost": {
+					"monthly": "3.01",
+					"upfront": "0.00",
+					"12 months": "36.12"
+				},
+				"Properties": {
+					"Hosted Zones": "1",
+					"Additional Records in Hosted Zones": "10"
+				}
+			}
+		]
+	}
+}

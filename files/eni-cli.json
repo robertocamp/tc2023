@@ -1,0 +1,31 @@
+{
+  "NetworkInterface": {
+      "AvailabilityZone": "us-east-2a",
+      "Description": "",
+      "Groups": [
+          {
+              "GroupName": "default",
+              "GroupId": "sg-0ad3c0cd01adac34f"
+          }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [],
+      "MacAddress": "02:4e:96:e5:8d:ed",
+      "NetworkInterfaceId": "eni-0838c06674aabdcc9",
+      "OwnerId": "240195868935",
+      "PrivateIpAddress": "10.100.0.10",
+      "PrivateIpAddresses": [
+          {
+              "Primary": true,
+              "PrivateIpAddress": "10.100.0.10"
+          }
+      ],
+      "RequesterId": "AIDATP3GKDEDUSV4NBFRB",
+      "RequesterManaged": false,
+      "SourceDestCheck": true,
+      "Status": "pending",
+      "SubnetId": "subnet-09c38cbba1004b0f1",
+      "TagSet": [],
+      "VpcId": "vpc-00ca1f9d4ade79810"
+  }
+}

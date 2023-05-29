@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.example.dailydirectory</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>mkdir</string>
+    <string>"$HOME/launchd-screenshots/$(date +'%b-%d-%Y')"</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/tmp/com.example.dailydirectory.out</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/com.example.dailydirectory.err</string>
+</dict>
+</plist>
