@@ -248,6 +248,62 @@ sudo systemctl enable amazon-ssm-agent
 ```
 - delete a launch template via CLI:
   + `aws ec2 delete-launch-template --launch-template-id lt-0b1275c55a7594fb5 --region us-east-2`
+4.0 **x region bucket replication**
+- copy s3 uri: s3://tc2023-source-bucket/pdf/vectorstock_21183809.zip
+- copy url: https://tc2023-source-bucket.s3.us-east-2.amazonaws.com/pdf/vectorstock_21183809.zip
+
+
+4.1 **S3 transfer acceleration test**
+- s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparison.html?region=us-east-2&amp;origBucketName=tc2023-source-bucket
+- This speed checker uses multipart uploads to transfer a file from your browser to various Amazon S3 regions with and without Amazon S3 Transfer Acceleration. 
+- It compares the speed results and shows the percentage difference for every region.
+- `aws s3api put-bucket-accelerate-configuration --bucket tc2023-source-bucket --accelerate-configuration Status=Enabled`
+- `aws s3 cp logo1.png  s3://tc2023-source-bucket/img/ --region us-east-2 --endpoint-url http://s3-accelerate.amazonaws.com`
+
+4.2 **Elastic Load Balancing**
+- the modern AWS Elastic Load Balancing service offers three separate balancer types:
+  + application load balancer (HTTP and HTTPS)
+  + network load balancer (TCP traffic)
+  + Gateway load balancer (third part virtual appliances supporting the GENEVE protocol)
+
+
+  4.3 create stack
+  - Prerequisites
+    + A registered domain name, such as example.com, that’s pointed to an Amazon Route 53 hosted zone
+    + The hosted zone must be in the same AWS account where you deploy this solution.
+    + AWS Identity and Access Management (IAM) permissions to launch CloudFormation templates that create IAM roles, and permissions to create all the AWS resources in the solution
+
+  - https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/getting-started-secure-static-website-cloudformation-template.html#deploy-website-cloudformation-console
+  - must install npm package on mac:  `brew install node`
+  - `make package-static`
+  - `aws s3 mb s3://brahmabar2023-artifacts --region us-east-1`
+  - aws cloudformation deploy --region us-east-1 --stack-name brahmabar-2023 --template-file packaged.template --capabilities CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND --parameter-overrides DomainName=brahmabar.com SubDomain=www
+  - get the information about your hosted zone:
+
+  ```
+  {
+    "HostedZones": [
+        {
+            "Id": "/hostedzone/Z03659883L37ZBEUGX6C8",
+            "Name": "brahmabar.com.",
+            "CallerReference": "066a7f87-85fc-4afa-9eed-714106f688a0",
+            "Config": {
+                "Comment": "tc2023",
+                "PrivateZone": false
+            },
+            "ResourceRecordSetCount": 5
+        }
+    ]
+}
+```
+
+- local deployment
+  + cd to repository root 
+  +  `brew install node`
+  + 
+  + 
+  + `aws cloudformation package --region us-east-1 --template-file templates/main.yaml --s3-bucket brahmabar2023-artifacts --output-template-file packaged.template`
+  + aws cloudformation deploy --region us-east-1 --stack-name brahmabar-2023 --template-file packaged.template --capabilities CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND --parameter-overrides DomainName=brahmabar.com SubDomain=www
 
 
  ## links
@@ -260,3 +316,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/find-software.html
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html
+
+
+aws cloudformation deploy --region us-east-1 --stack-name brahmabar-2023 --template-file packaged.template --capabilities CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND --parameter-overrides DomainName=brahmabar.com SubDomain=www HostedZoneId=Z03659883L37ZBEUGX6C8
