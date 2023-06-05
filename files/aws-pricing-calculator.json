@@ -1,0 +1,60 @@
+{
+	"Name": "My Estimate",
+	"Total Cost": {
+		"monthly": "13.03",
+		"upfront": "4292.40",
+		"12 months": "4448.78"
+	},
+	"Metadata": {
+		"Currency": "USD",
+		"Locale": "en_US",
+		"Created On": "5/26/2023",
+		"Legal Disclaimer": "AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",
+		"Share Url": "https://calculator.aws/#/estimate?id=fa30b15ec39248802a1b7cec00409e1a630a4c43"
+	},
+	"Groups": {
+		"Services": [
+			{
+				"Service Name": "Amazon EC2 ",
+				"Description": "tc2023",
+				"Region": "US East (Ohio)",
+				"Service Cost": {
+					"monthly": "0.00",
+					"upfront": "4292.40",
+					"12 months": "4292.40"
+				},
+				"Properties": {
+					"Tenancy": "Shared Instances",
+					"Operating system": "Linux",
+					"Workload": "Consistent, Number of instances: 2",
+					"Advance EC2 instance": "inf1.2xlarge",
+					"Pricing strategy": "Compute Savings Plans 1 Year  All upfront",
+					"Enable monitoring": "disabled",
+					"DT Inbound: Not selected": "0 tb_month",
+					"DT Outbound: Not selected": "0 tb_month",
+					"DT Intra-Region:": "0 tb_month"
+				}
+			},
+			{
+				"Service Name": "Amazon EC2 ",
+				"Region": "US East (Ohio)",
+				"Service Cost": {
+					"monthly": "13.03",
+					"upfront": "0.00",
+					"12 months": "156.38"
+				},
+				"Properties": {
+					"Tenancy": "Shared Instances",
+					"Operating system": "Linux",
+					"Workload": "Consistent, Number of instances: 4",
+					"Advance EC2 instance": "inf1.2xlarge",
+					"Pricing strategy": "On-Demand Utilization: 9 Hours/Month",
+					"Enable monitoring": "disabled",
+					"DT Inbound: Not selected": "0 tb_month",
+					"DT Outbound: Not selected": "0 tb_month",
+					"DT Intra-Region:": "0 tb_month"
+				}
+			}
+		]
+	}
+}

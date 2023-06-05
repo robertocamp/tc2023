@@ -1,0 +1,21 @@
+{
+  "Vpc": {
+      "CidrBlock": "10.100.0.0/16",
+      "DhcpOptionsId": "dopt-e190378a",
+      "State": "pending",
+      "VpcId": "vpc-00ca1f9d4ade79810",
+      "OwnerId": "240195868935",
+      "InstanceTenancy": "default",
+      "Ipv6CidrBlockAssociationSet": [],
+      "CidrBlockAssociationSet": [
+          {
+              "AssociationId": "vpc-cidr-assoc-007319120451688c1",
+              "CidrBlock": "10.100.0.0/16",
+              "CidrBlockState": {
+                  "State": "associated"
+              }
+          }
+      ],
+      "IsDefault": false
+  }
+}

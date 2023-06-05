@@ -1,0 +1,14 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowAccess",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "execute-api:Invoke"
+      ],
+      "Resource": "arn:aws:execute-api:us-east-1:123456789012:abcdefghij/*/GET/myEndpoint"
+    }
+  ]
+}

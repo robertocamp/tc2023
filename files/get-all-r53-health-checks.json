@@ -1,0 +1,21 @@
+{
+  "HealthChecks": [
+      {
+          "Id": "4338c292-253f-48d0-ba8c-ba62d58bec60",
+          "CallerReference": "152baa92-d5b8-439e-a953-124a2b047e4f",
+          "HealthCheckConfig": {
+              "IPAddress": "3.12.108.181",
+              "Port": 80,
+              "Type": "HTTP",
+              "FullyQualifiedDomainName": "www.brahabar.com",
+              "RequestInterval": 30,
+              "FailureThreshold": 3,
+              "MeasureLatency": false,
+              "Inverted": false,
+              "Disabled": false,
+              "EnableSNI": false
+          },
+          "HealthCheckVersion": 1
+      }
+  ]
+}
